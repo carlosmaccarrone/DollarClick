@@ -26,7 +26,7 @@ jobs:
       run: npm test
 
     - name: Build Angular app
-      run: npm run build -- --base-href /DollarClick/
+      run: npm run build -- --configuration production --base-href /DollarClick/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
