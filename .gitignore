@@ -19,7 +19,6 @@ pnpm-debug.log*
 # -------------------------
 # Angular build outputs
 # -------------------------
-/dist/
 /out-tsc/
 /tmp/
 /temp/
