@@ -1,0 +1,26 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+router-outlet {
+  display: block;
+/*  margin-top: 20px;*/
+}
