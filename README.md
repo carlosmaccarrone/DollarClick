@@ -1,3 +1,6 @@
+[![Build and Deploy Angular](https://github.com/carlosmaccarrone/DollarClick/actions/workflows/ci.yml/badge.svg)](https://github.com/carlosmaccarrone/DollarClick/actions/workflows/ci.yml)
+🎬 [Live Demo](https://carlosmaccarrone.github.io/DollarClick/) – Check out the app running in your browser!
+
 # DollarClick
 
 DollarClick is a lightweight Angular application that allows users to quickly convert between Argentine Pesos (ARS) and US Dollars (USD) using real-time exchange rates. The app emphasizes a clean and modern UI with a financial theme.
