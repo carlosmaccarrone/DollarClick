@@ -23,7 +23,7 @@
   opacity: 0.9;
 }
 
-input[type="number"] {
+input[type="text"] {
   width: 80%;
   padding: 10px;
   margin-bottom: 15px;
@@ -38,7 +38,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input[type="number"]:focus {
+input[type="text"]:focus {
   outline: none;
   border-color: #43a047;
   box-shadow: 0 0 5px #43a047;

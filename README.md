@@ -27,12 +27,18 @@ cd DollarClick
 ```
 npm install
 ```
-3. Start the development server:
+3. Build the app:
 ```
-ng serve
+ng build --base-href /DollarClick/
+```
+4. Serve the built files locally (requires serve or similar tool):
+```
+npx serve dist/DollarClick
 ```
 
-Visit http://localhost:4200/ in your browser.
+Visit http://localhost:4200/ in your browser.  
+
+Note: The app's index.html is configured for GitHub Pages (/DollarClick/). To test it locally, you need to serve the built files with a static server.  
 
 ## Usage
 

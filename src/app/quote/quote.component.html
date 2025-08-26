@@ -3,11 +3,12 @@
 
   <label for="amount">Amount:</label>
   <input
-    type="number"
+    type="text"
     id="amount"
     [(ngModel)]="amount"
     placeholder="Enter amount"
     autocomplete="off"
+    (input)="validateNumber($event)"
   />
 
   <div class="buttons">

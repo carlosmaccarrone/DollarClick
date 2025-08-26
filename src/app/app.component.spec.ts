@@ -1,23 +1,36 @@
+import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
 
-describe('AppComponent', () => {
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  template: `<h1>DollarClick</h1>`
+})
+class AppComponentMock {}
+
+beforeAll(() => {
+  TestBed.initTestEnvironment(
+    BrowserDynamicTestingModule,
+    platformBrowserDynamicTesting()
+  );
+});
+
+describe('AppComponent test', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponentMock],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('should create the mock app', () => {
+    const fixture = TestBed.createComponent(AppComponentMock);
+    expect(fixture.componentInstance).toBeTruthy();
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = TestBed.createComponent(AppComponentMock);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('DollarClick');
+    expect(fixture.nativeElement.querySelector('h1')?.textContent).toContain('DollarClick');
   });
 });

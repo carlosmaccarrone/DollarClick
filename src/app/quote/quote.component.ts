@@ -38,6 +38,21 @@ export class QuoteComponent {
     this.amount.set(value);
   }
 
+  public validateNumber(event: Event) {
+    const input = event.target as HTMLInputElement;
+    let value = input.value.replace(/,/g, '.');
+
+    value = value.replace(/[^0-9.]/g, '');
+
+    const parts = value.split('.');
+    if (parts.length > 2) {
+      value = parts[0] + '.' + parts.slice(1).join('');
+    }
+
+    input.value = value;
+    this.amount.set(value ? parseFloat(value) : null);
+  }
+
   private showResultAnimation() {
     const el = document.querySelector('.result') as HTMLElement | null;
     if (!el) return;

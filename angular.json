@@ -84,8 +84,7 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "outputPath": "dist/DollarClick"
+            ]
           }
         }
       }
